@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avion Paints | Ahmedabad's Industrial Color Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; color: #0f172a; overflow-x: hidden; }
+
+        /* 1. ANIMATION ENGINE (Framer Style) */
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid #f1f5f9; }
+        
+        /* Client Marquee Animation */
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { animation: marquee 25s linear infinite; }
+
+        .vision-card { transition: all 0.4s ease; border: 1px solid transparent; }
+        .vision-card:hover { transform: translateY(-10px); border-color: #3b82f6; background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="selection:bg-blue-600 selection:text-white">
+
+    <nav class="fixed w-full z-50 px-10 py-5 flex justify-between items-center glass-nav">
+        <div class="text-2xl font-extrabold tracking-tighter text-slate-900">
+            AVION<span class="text-blue-600 italic uppercase ml-1">Paints</span>
+        </div>
+        <div class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
+            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="#vision" class="hover:text-blue-600 transition">Vision</a>
+            <a href="#clients" class="hover:text-blue-600 transition">Clients</a>
+            <a href="#team" class="hover:text-blue-600 transition">Team</a>
+            <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <span class="reveal active text-blue-600 font-bold text-[10px] tracking-[0.5em] uppercase mb-6 bg-blue-50 px-4 py-1 rounded-full">Shahpur • Ahmedabad • Since 1994</span>
+        <h1 class="reveal active text-7xl md:text-[9rem] font-extrabold tracking-tighter leading-[0.85] text-slate-900">
+            COATING <br> <span class="text-blue-600 italic">THE FUTURE.</span>
+        </h1>
+        <div class="reveal active mt-12 w-px h-20 bg-slate-200 animate-bounce mx-auto"></div>
+    </section>
+
+    <section id="about" class="py-32 px-10 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-24 items-center">
+            <div class="reveal">
+                <h2 class="text-5xl font-extrabold text-slate-900 mb-8 leading-tight">What We Are.</h2>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                    Avion Paints is a specialized <strong>Industrial Color Manufacturer</strong> based in Shahpur, Ahmedabad. We bridge the gap between heavy-duty protection and high-end aesthetics.
+                </p>
+                <p class="text-slate-600 text-lg leading-relaxed mb-10">
+                    Founded by <strong>Monish Sheikh</strong> and <strong>Irfan Sheikh</strong>, our company has pioneered chemical coatings that protect structural steel, automotive parts, and designer architecture from the harsh Indian climate.
+                </p>
+                <div class="flex gap-10">
+                    <div><p class="text-4xl font-extrabold text-blue-600">30+</p><p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Years Heritage</p></div>
+                    <div><p class="text-4xl font-extrabold text-blue-600">Ahmedabad</p><p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Headquarters</p></div>
+                </div>
+            </div>
+            <div class="reveal delay-200">
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Industrial Paint Mixing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="py-32 px-10 bg-slate-50">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h2 class="reveal text-5xl font-extrabold text-slate-900">Our Purpose</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="reveal vision-card p-12 rounded-[3rem] bg-white">
+                <div class="w-12 h-12 bg-blue-600 rounded-2xl mb-8 flex items-center justify-center text-white font-bold">V</div>
+                <h3 class="text-2xl font-bold mb-4 italic">Our Vision</h3>
+                <p class="text-slate-500 leading-relaxed">To become the global benchmark for industrial color coatings, where every structural surface in the world is protected by Avion's molecular-grade technology.</p>
+            </div>
+            <div class="reveal delay-200 vision-card p-12 rounded-[3rem] bg-white">
+                <div class="w-12 h-12 bg-slate-900 rounded-2xl mb-8 flex items-center justify-center text-white font-bold">M</div>
+                <h3 class="text-2xl font-bold mb-4 italic">Our Mission</h3>
+                <p class="text-slate-500 leading-relaxed">To provide Monish and Irfan Sheikh’s commitment to quality to every client, ensuring sustainable, eco-friendly, and ultra-durable paint solutions for a safer planet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 border-y border-slate-100 bg-white overflow-hidden">
+        <p class="text-center text-[10px] font-bold tracking-[0.5em] text-slate-400 uppercase mb-12">Trusted by Architectural & Industrial Giants</p>
+        <div class="flex animate-marquee whitespace-nowrap grayscale opacity-40">
+            <div class="flex gap-32 items-center px-16">
+                <span class="text-3xl font-black uppercase tracking-tighter">Skyline Corp</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Urban_Build</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Nexus_Design</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Vesta_Homes</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Eco_Structure</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Skyline Corp</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Urban_Build</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Nexus_Design</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Vesta_Homes</span>
+                <span class="text-3xl font-black uppercase tracking-tighter">Eco_Structure</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-32 px-10 max-w-7xl mx-auto">
+        <h2 class="reveal text-center text-5xl font-extrabold text-slate-900 mb-20">The Leadership</h2>
+        <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+            <div class="reveal text-center">
+                <div class="w-64 h-64 rounded-[3.5rem] overflow-hidden mx-auto mb-8 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="text-2xl font-bold">Monish Sheikh</h4>
+                <p class="text-blue-600 font-bold uppercase text-[10px] tracking-widest mt-2">Co-Founder / CEO</p>
+            </div>
+            <div class="reveal delay-200 text-center">
+                <div class="w-64 h-64 rounded-[3.5rem] overflow-hidden mx-auto mb-8 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="text-2xl font-bold">Irfan Sheikh</h4>
+                <p class="text-blue-600 font-bold uppercase text-[10px] tracking-widest mt-2">Co-Founder / Operations</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 px-10 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
+            <div class="reveal">
+                <h2 class="text-7xl font-extrabold text-slate-900 mb-12 tracking-tighter italic">CONNECT<span class="text-blue-600">.</span></h2>
+                <div class="space-y-12">
+                    <div>
+                        <p class="text-blue-600 font-bold text-[10px] tracking-[0.4em] uppercase mb-3">Head Office</p>
+                        <p class="text-2xl text-slate-600 font-light italic">Shahpur, Ahmedabad, Gujarat, India</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-600 font-bold text-[10px] tracking-[0.4em] uppercase mb-3">Primary Connect</p>
+                        <p class="text-4xl text-slate-900 font-bold tracking-tighter underline">+91 90998 85594</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14686.376839353901!2d72.5807986!3d23.0386766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f7063467f9%3A0xe542618991a0c7b!2sShahpur%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1705500000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="mt-40 text-center text-slate-300 text-[10px] font-bold tracking-[0.6em] uppercase">
+            AVION PAINTS PVT LTD // SHAHPUR // AHMEDABAD // © 2026
+        </div>
+    </footer>
+
+    <script>
+        // 1. ANIMATION ENGINE: Intersection Observer for smooth reveals
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
